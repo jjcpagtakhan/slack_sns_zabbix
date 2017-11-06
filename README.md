@@ -27,7 +27,7 @@ Setup operations to send alert to your created user using also your newly create
 5. Ensure the script and log file (so the logging will work) is owned by zabbix user. Also, make sure that zabbix or the instance itself has permission to do SNS publish, else, SNS publish will fail.
 
 ## Running the tests 
-You may do manual testing to check if you'll be able to receive the notification on the account you used or just want to real alerts to come, you'll see the actions status if it has successfully run or has failed.
+You may do manual testing to check if you'll be able to receive the notification on the account you used or just wait for real alerts to come, you'll see the actions status if it has successfully run or has failed.
 
 ### Manual testing
 The first input will be the subject and the second input is for the message (OK/PROBLEM/RECOVERED/RECOVERY)
@@ -35,6 +35,9 @@ The first input will be the subject and the second input is for the message (OK/
 $ chmod a+x script.sh
 $ ./script.sh "This is a test notification" PROBLEM
 ```
+
+### No notification received
+Check out the log file to see if the alert has satisfied the defined conditions. Verify account permissioned and URLs. Do neccessary adjustments if needed.
 
 ## Acknowledgement
 This work is referenced from https://github.com/ericoc/zabbix-slack-alertscript

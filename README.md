@@ -14,7 +14,7 @@ Create a media type and use the script that should be placed on your internal cu
 Define the parameters you need on your script.
 ```
 ```
-Under Admnistration -> Users
+Under Administration -> Users
 Create a new user and apply the media you previously added then select your preferred alert severity
 ```
 ```
@@ -37,7 +37,7 @@ $ ./script.sh "This is a test notification" PROBLEM
 ```
 
 ### No notification received
-Check out the log file to see if the alert has satisfied the defined conditions. Verify account permissioned and URLs. Do neccessary adjustments if needed.
+Check out the log file to see if the alert has satisfied the defined conditions. Verify account permissions, channel and URLs. Do neccessary adjustments if needed.
 
 ## Acknowledgement
 This work is referenced from https://github.com/ericoc/zabbix-slack-alertscript

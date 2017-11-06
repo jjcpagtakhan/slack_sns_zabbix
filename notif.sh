@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# will initiate slack alert once alert severity is >=High
+# will initiate slack/sns email alert once alert severity is >=High
 # reference - https://github.com/ericoc/zabbix-slack-alertscript
 
 # For Slack web-hook URL and user 

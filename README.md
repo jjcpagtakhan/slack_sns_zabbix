@@ -59,7 +59,22 @@ Setup operations to send alert to your created user using also your newly create
 
 ![alt tag](https://github.com/jjcpagtakhan/slack_sns_zabbix/blob/master/img/7-zabbix-rec.png)
 
-5. Ensure the script and log file (so the logging will work) is owned by zabbix user. Also, make sure that zabbix or the instance itself has permission to do SNS publish, else, SNS publish will fail.
+6. Ensure the script and log file (so the logging will work) is owned by zabbix user. 
+```
+chown zabbix:zabbix /usr/lib/zabbix/alertscripts/notif.sh
+chown -R zabbix:zabbix /var/log/zabbix_notif
+```
+7. Enable shell for zabbix user. 
+```
+usermod zabbix -d /home/zabbix -s /bin/bash
+chown -R zabbix:zabbix /home/zabbix
+```
+8. Make sure that zabbix user or the instance itself has permission to do SNS publish, else, SNS publish will fail.
+```
+apt-get install python-pip
+pip install awscli
+aws configure
+```
 
 ## Running the tests 
 You may do manual testing to check if you'll be able to receive the notification on the account you used or just wait for real alerts to come, you'll see the actions status if it has successfully run or has failed.
